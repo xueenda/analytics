@@ -38,6 +38,7 @@ class Historical extends React.Component {
           </div>
         </div>
         <VisitorGraph site={this.props.site} query={this.props.query} />
+        { this.renderConversions() }
         <div className="w-full block md:flex items-start justify-between">
           <Sources site={this.props.site} query={this.props.query} />
           <Pages site={this.props.site} query={this.props.query} />
@@ -46,7 +47,6 @@ class Historical extends React.Component {
           <Countries site={this.props.site} query={this.props.query} />
           <Devices site={this.props.site} query={this.props.query} />
         </div>
-        { this.renderConversions() }
       </div>
     )
   }

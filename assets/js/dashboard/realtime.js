@@ -37,6 +37,7 @@ class Realtime extends React.Component {
           </div>
         </div>
         <VisitorGraph site={this.props.site} query={this.props.query} timer={this.props.timer} />
+        { this.renderConversions() }
         <div className="w-full block md:flex items-start justify-between">
           <Sources site={this.props.site} query={this.props.query} timer={this.props.timer} />
           <Pages site={this.props.site} query={this.props.query} timer={this.props.timer} />
@@ -44,9 +45,7 @@ class Realtime extends React.Component {
         <div className="w-full block md:flex items-start justify-between">
           <Countries site={this.props.site} query={this.props.query} timer={this.props.timer} />
           <Devices site={this.props.site} query={this.props.query} timer={this.props.timer} />
-        </div>
-
-        { this.renderConversions() }
+        </div>  
       </div>
     )
   }
